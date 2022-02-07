@@ -1,0 +1,28 @@
+<div class="container">
+  <div *ngIf="expeditions$ | async as expeditions; else loading">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Mutação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let expedition of expeditions">
+          <th scope="row">{{ expedition._id }}</th>
+          <td>{{ expedition.name }}</td>
+          <td>{{ expedition.mutation }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #loading>
+    <div class="loading-spinner">
+      <div class="spinner-border text-light" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </ng-template>
+  <app-toasts></app-toasts>
+</div>

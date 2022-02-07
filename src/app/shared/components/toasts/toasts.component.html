@@ -1,0 +1,8 @@
+<div class="toasts">
+  <app-toast
+    *ngFor="let toast of toastsService.toasts"
+    [title]="toast.title"
+    [message]="toast.messagem"
+    [date]="toast.date"
+  ></app-toast>
+</div>

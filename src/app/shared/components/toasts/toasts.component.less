@@ -1,0 +1,20 @@
+.toasts {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  padding: 1rem;
+  z-index: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  app-toast {
+    margin-bottom: 0.8rem;
+
+    &:last-child {
+      margin-bottom: 0rem;
+    }
+  }
+}

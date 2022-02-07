@@ -1,0 +1,45 @@
+@import "../../../../../styles.less";
+
+.toast {
+  background-color: @background-color-1;
+  color: @color-white;
+  border: 0px;
+
+  .toast-header {
+    background-color: @background-color-3;
+
+    button {
+      background-color: @background-color-3;
+      border: 0px;
+      color: @color-white;
+    }
+
+    strong {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      div:first-child {
+        font-weight: bold;
+        color: @color-cyan;
+
+        &.error {
+          color: @color-red;
+        }
+
+        &.caution {
+          color: @color-orange;
+        }
+
+        &.success {
+          color: @color-green;
+        }
+      }
+
+      div:last-child {
+        font-weight: normal;
+      }
+    }
+  }
+}

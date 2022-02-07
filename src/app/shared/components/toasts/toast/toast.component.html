@@ -1,0 +1,31 @@
+<div
+  #myToast
+  class="toast show"
+  role="alert"
+  aria-live="assertive"
+  aria-atomic="true"
+>
+  <div class="toast-header">
+    <strong class="me-auto">
+      <div
+        [ngClass]="[
+          title == 'Erro' ? 'error' : '',
+          title == 'Atenção' ? 'caution' : '',
+          title == 'Sucesso' ? 'success' : ''
+        ]"
+      >
+        <i [ngClass]="['bi', title | title]"></i>
+        {{ title }}
+      </div>
+      <div>
+        {{ date | date: "hh:mm:ss" }}
+      </div>
+    </strong>
+    <button type="button" data-bs-dismiss="toast" aria-label="Close">
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+  <div class="toast-body">
+    {{ message }}
+  </div>
+</div>
